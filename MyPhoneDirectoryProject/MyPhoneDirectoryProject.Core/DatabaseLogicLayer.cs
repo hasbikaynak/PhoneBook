@@ -25,7 +25,7 @@ namespace MyPhoneDirectoryProject.Core
                 Directory.CreateDirectory(@"c:\MyPhoneDirectoryProjectDB\");
                 User Demo = new User();
                 Demo.ID = Guid.NewGuid();
-                Demo.UserName = "Demo";
+                Demo.Name = "Demo";
                 Demo.Password = "Demo";
 
                 string JsonUsersText = Newtonsoft.Json.JsonConvert.SerializeObject(Demo);
@@ -49,7 +49,7 @@ namespace MyPhoneDirectoryProject.Core
             {
 
                 Result = 0;
-            }
+            } 
             return Result;
         }
 
@@ -67,11 +67,12 @@ namespace MyPhoneDirectoryProject.Core
         public int ControlUser(User user)
         {
             int userresult = 0;
-            if (File.Exists(@"c:\MyPhoneDirectoryProjectDB\Directory.json"))
+            if (File.Exists(@"c:\MyPhoneDirectoryProjectDB\User.json"))
             {
-               string JsonUserText= File.ReadAllText(@"c:\MyPhoneDirectoryProjectDB\Directory.json");
-                List<User> users = Newtonsoft.Json.JsonConvert.DeserializeObject<List<User>>(JsonUserText);
-               userresult = users.FindAll(I => I.UserName == user.UserName && I.Password == user.Password).ToList().Count();
+               string JsonUserText= File.ReadAllText(@"c:\MyPhoneDirectoryProjectDB\User.json");
+                List<User> users = Newtonsoft.Json.JsonConvert.DeserializeObject<List<User>>
+                    (JsonUserText);
+               userresult = users.FindAll(I => I.Name == user.Name && I.Password == user.Password).ToList().Count();
             }
             return userresult;
             

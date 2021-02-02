@@ -1,0 +1,6 @@
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Entities\bin\Debug\MyPhoneDirectoryProject.Entities.dll
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Entities\bin\Debug\MyPhoneDirectoryProject.Entities.pdb
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Entities\obj\Debug\MyPhoneDirectoryProject.Entities.csprojAssemblyReference.cache
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Entities\obj\Debug\MyPhoneDirectoryProject.Entities.csproj.CoreCompileInputs.cache
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Entities\obj\Debug\MyPhoneDirectoryProject.Entities.dll
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Entities\obj\Debug\MyPhoneDirectoryProject.Entities.pdb

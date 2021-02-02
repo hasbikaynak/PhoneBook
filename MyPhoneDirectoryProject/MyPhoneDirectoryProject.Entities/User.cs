@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace MyPhoneDirectoryProject.Entities
 {
-  public  class User
+  public  class User 
     {
+        
         public Guid ID { get; set; }
-        public string UserName { get; set; }
+        public string Name { get; set; }
         public string Password { get; set; }
 
     }

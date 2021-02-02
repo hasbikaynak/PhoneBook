@@ -35,7 +35,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_username = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
@@ -49,7 +49,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_enter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_enter.Name = "btn_enter";
             this.btn_enter.Size = new System.Drawing.Size(154, 26);
-            this.btn_enter.TabIndex = 0;
+            this.btn_enter.TabIndex = 2;
             this.btn_enter.Text = "Enter System";
             this.btn_enter.UseVisualStyleBackColor = true;
             this.btn_enter.Click += new System.EventHandler(this.btn_enter_Click);
@@ -69,7 +69,7 @@ namespace MyPhoneDirectoryProject.WFUI
             // 
             this.groupBox2.Controls.Add(this.txt_password);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.btn_username);
+            this.groupBox2.Controls.Add(this.txt_username);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btn_enter);
             this.groupBox2.Location = new System.Drawing.Point(180, 10);
@@ -87,7 +87,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(156, 20);
-            this.txt_password.TabIndex = 2;
+            this.txt_password.TabIndex = 1;
             // 
             // label2
             // 
@@ -99,13 +99,13 @@ namespace MyPhoneDirectoryProject.WFUI
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
-            // btn_username
+            // txt_username
             // 
-            this.btn_username.Location = new System.Drawing.Point(80, 56);
-            this.btn_username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_username.Name = "btn_username";
-            this.btn_username.Size = new System.Drawing.Size(156, 20);
-            this.btn_username.TabIndex = 2;
+            this.txt_username.Location = new System.Drawing.Point(80, 56);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(156, 20);
+            this.txt_username.TabIndex = 0;
             // 
             // label1
             // 
@@ -135,8 +135,10 @@ namespace MyPhoneDirectoryProject.WFUI
             this.ClientSize = new System.Drawing.Size(480, 240);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Interface Field";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -153,7 +155,7 @@ namespace MyPhoneDirectoryProject.WFUI
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox btn_username;
+        private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

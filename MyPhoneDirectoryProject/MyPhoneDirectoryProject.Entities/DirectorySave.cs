@@ -10,7 +10,7 @@ namespace MyPhoneDirectoryProject.Entities
     {
         public Guid ID { get; set; }
         public string Name { get; set; }
-        public string  Surname { get; set; }
+        public string Surname { get; set; }
         public string PhoneI { get; set; }
         public string PhoneII { get; set; }
         public string PhoneIII { get; set; }

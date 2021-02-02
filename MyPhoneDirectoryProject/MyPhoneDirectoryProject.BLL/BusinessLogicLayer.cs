@@ -20,7 +20,7 @@ namespace MyPhoneDirectoryProject.BLL
             if (!string.IsNullOrEmpty(User) && !string.IsNullOrEmpty(Password))
             {
                 User user = new User();
-                user.UserName = User;
+                user.Name = User;
                 user.Password = Password;
                result = DLL.ControlUser(user);
             }

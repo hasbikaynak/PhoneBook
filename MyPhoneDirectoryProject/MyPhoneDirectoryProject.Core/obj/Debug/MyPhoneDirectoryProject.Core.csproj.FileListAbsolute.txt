@@ -1,0 +1,11 @@
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\bin\Debug\MyPhoneDirectoryProject.Core.dll
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\bin\Debug\MyPhoneDirectoryProject.Core.pdb
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\bin\Debug\MyPhoneDirectoryProject.Entities.dll
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\bin\Debug\MyPhoneDirectoryProject.Entities.pdb
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\obj\Debug\MyPhoneDirectoryProject.Core.csprojAssemblyReference.cache
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\obj\Debug\MyPhoneDirectoryProject.Core.csproj.CoreCompileInputs.cache
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\obj\Debug\MyPhoneDirectoryProject.Core.csproj.CopyComplete
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\obj\Debug\MyPhoneDirectoryProject.Core.dll
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.Core\obj\Debug\MyPhoneDirectoryProject.Core.pdb
