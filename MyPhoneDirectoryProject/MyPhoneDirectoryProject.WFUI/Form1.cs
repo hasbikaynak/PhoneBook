@@ -16,5 +16,10 @@ namespace MyPhoneDirectoryProject.WFUI
         {
             InitializeComponent();
         }
+
+        private void btn_enter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
