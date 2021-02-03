@@ -30,7 +30,9 @@ namespace MyPhoneDirectoryProject.WFUI
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lst_list = new System.Windows.Forms.ListBox();
+            this.grpbox_newdirectoryregistry = new System.Windows.Forms.GroupBox();
+            this.btn_update = new System.Windows.Forms.Button();
             this.btn_registry = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -52,16 +54,14 @@ namespace MyPhoneDirectoryProject.WFUI
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txt_description = new System.Windows.Forms.TextBox();
-            this.lst_list = new System.Windows.Forms.ListBox();
-            this.btn_update = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_givexml = new System.Windows.Forms.Button();
             this.lbl_status = new System.Windows.Forms.Label();
-            this.btn_takexml = new System.Windows.Forms.Button();
-            this.btn_givejson = new System.Windows.Forms.Button();
             this.btn_givecsv = new System.Windows.Forms.Button();
+            this.btn_givejson = new System.Windows.Forms.Button();
+            this.btn_takexml = new System.Windows.Forms.Button();
+            this.btn_givexml = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpbox_newdirectoryregistry.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -80,19 +80,40 @@ namespace MyPhoneDirectoryProject.WFUI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Directory List";
             // 
-            // groupBox2
+            // lst_list
             // 
-            this.groupBox2.Controls.Add(this.btn_update);
-            this.groupBox2.Controls.Add(this.btn_registry);
-            this.groupBox2.Controls.Add(this.tabControl1);
-            this.groupBox2.Location = new System.Drawing.Point(363, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(556, 683);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "New Directory Registry";
+            this.lst_list.FormattingEnabled = true;
+            this.lst_list.ItemHeight = 16;
+            this.lst_list.Location = new System.Drawing.Point(7, 25);
+            this.lst_list.Name = "lst_list";
+            this.lst_list.Size = new System.Drawing.Size(325, 644);
+            this.lst_list.TabIndex = 0;
+            this.lst_list.DoubleClick += new System.EventHandler(this.lst_list_DoubleClick);
+            // 
+            // grpbox_newdirectoryregistry
+            // 
+            this.grpbox_newdirectoryregistry.Controls.Add(this.btn_update);
+            this.grpbox_newdirectoryregistry.Controls.Add(this.btn_registry);
+            this.grpbox_newdirectoryregistry.Controls.Add(this.tabControl1);
+            this.grpbox_newdirectoryregistry.Location = new System.Drawing.Point(363, 15);
+            this.grpbox_newdirectoryregistry.Margin = new System.Windows.Forms.Padding(4);
+            this.grpbox_newdirectoryregistry.Name = "grpbox_newdirectoryregistry";
+            this.grpbox_newdirectoryregistry.Padding = new System.Windows.Forms.Padding(4);
+            this.grpbox_newdirectoryregistry.Size = new System.Drawing.Size(556, 683);
+            this.grpbox_newdirectoryregistry.TabIndex = 1;
+            this.grpbox_newdirectoryregistry.TabStop = false;
+            this.grpbox_newdirectoryregistry.Text = "New Directory Registry";
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(19, 641);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(521, 28);
+            this.btn_update.TabIndex = 1;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_registry_Click);
             // 
             // btn_registry
             // 
@@ -309,26 +330,6 @@ namespace MyPhoneDirectoryProject.WFUI
             this.txt_description.Size = new System.Drawing.Size(516, 530);
             this.txt_description.TabIndex = 0;
             // 
-            // lst_list
-            // 
-            this.lst_list.FormattingEnabled = true;
-            this.lst_list.ItemHeight = 16;
-            this.lst_list.Location = new System.Drawing.Point(7, 25);
-            this.lst_list.Name = "lst_list";
-            this.lst_list.Size = new System.Drawing.Size(325, 644);
-            this.lst_list.TabIndex = 0;
-            // 
-            // btn_update
-            // 
-            this.btn_update.Location = new System.Drawing.Point(19, 641);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(521, 28);
-            this.btn_update.TabIndex = 1;
-            this.btn_update.Text = "Update";
-            this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_registry_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lbl_status);
@@ -343,15 +344,6 @@ namespace MyPhoneDirectoryProject.WFUI
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DATA Give-Get";
             // 
-            // btn_givexml
-            // 
-            this.btn_givexml.Location = new System.Drawing.Point(31, 49);
-            this.btn_givexml.Name = "btn_givexml";
-            this.btn_givexml.Size = new System.Drawing.Size(102, 62);
-            this.btn_givexml.TabIndex = 0;
-            this.btn_givexml.Text = "GIVE XML ";
-            this.btn_givexml.UseVisualStyleBackColor = true;
-            // 
             // lbl_status
             // 
             this.lbl_status.AutoSize = true;
@@ -362,14 +354,14 @@ namespace MyPhoneDirectoryProject.WFUI
             this.lbl_status.TabIndex = 1;
             this.lbl_status.Text = "STATUS : WAITING";
             // 
-            // btn_takexml
+            // btn_givecsv
             // 
-            this.btn_takexml.Location = new System.Drawing.Point(163, 49);
-            this.btn_takexml.Name = "btn_takexml";
-            this.btn_takexml.Size = new System.Drawing.Size(102, 62);
-            this.btn_takexml.TabIndex = 0;
-            this.btn_takexml.Text = "TAKE XML ";
-            this.btn_takexml.UseVisualStyleBackColor = true;
+            this.btn_givecsv.Location = new System.Drawing.Point(425, 49);
+            this.btn_givecsv.Name = "btn_givecsv";
+            this.btn_givecsv.Size = new System.Drawing.Size(102, 62);
+            this.btn_givecsv.TabIndex = 0;
+            this.btn_givecsv.Text = "GIVE CSV";
+            this.btn_givecsv.UseVisualStyleBackColor = true;
             // 
             // btn_givejson
             // 
@@ -380,14 +372,23 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_givejson.Text = "GIVE JSON";
             this.btn_givejson.UseVisualStyleBackColor = true;
             // 
-            // btn_givecsv
+            // btn_takexml
             // 
-            this.btn_givecsv.Location = new System.Drawing.Point(425, 49);
-            this.btn_givecsv.Name = "btn_givecsv";
-            this.btn_givecsv.Size = new System.Drawing.Size(102, 62);
-            this.btn_givecsv.TabIndex = 0;
-            this.btn_givecsv.Text = "GIVE CSV";
-            this.btn_givecsv.UseVisualStyleBackColor = true;
+            this.btn_takexml.Location = new System.Drawing.Point(163, 49);
+            this.btn_takexml.Name = "btn_takexml";
+            this.btn_takexml.Size = new System.Drawing.Size(102, 62);
+            this.btn_takexml.TabIndex = 0;
+            this.btn_takexml.Text = "TAKE XML ";
+            this.btn_takexml.UseVisualStyleBackColor = true;
+            // 
+            // btn_givexml
+            // 
+            this.btn_givexml.Location = new System.Drawing.Point(31, 49);
+            this.btn_givexml.Name = "btn_givexml";
+            this.btn_givexml.Size = new System.Drawing.Size(102, 62);
+            this.btn_givexml.TabIndex = 0;
+            this.btn_givexml.Text = "GIVE XML ";
+            this.btn_givexml.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -395,7 +396,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 859);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grpbox_newdirectoryregistry);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -404,7 +405,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.grpbox_newdirectoryregistry.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -419,7 +420,7 @@ namespace MyPhoneDirectoryProject.WFUI
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpbox_newdirectoryregistry;
         private System.Windows.Forms.Button btn_registry;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;

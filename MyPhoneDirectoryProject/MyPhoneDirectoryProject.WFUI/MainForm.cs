@@ -54,6 +54,35 @@ namespace MyPhoneDirectoryProject.WFUI
         {
             Fill();
         }
+
+        private void lst_list_DoubleClick(object sender, EventArgs e)
+        {
+            ListBox L = (ListBox)sender;
+            DirectorySave chosenvalue  = (DirectorySave)L.SelectedItem;
+            txt_name.Text = chosenvalue.Name;
+            txt_surname.Text = chosenvalue.Surname;
+             txt_phonei.Text = chosenvalue.PhoneI;
+            txt_phoneii.Text = chosenvalue.PhoneII;
+           txt_phoneiii.Text = chosenvalue.PhoneIII;
+              txt_email.Text = chosenvalue.Email;
+            txt_website.Text = chosenvalue.Website;
+            txt_address.Text = chosenvalue.Address;
+        txt_description.Text = chosenvalue.Description;
+            grpbox_newdirectoryregistry.Text = "Update a Directory ";
+
+                txt_name.BackColor = Color.Yellow;
+                txt_surname.BackColor = Color.Yellow;
+                txt_phonei.BackColor = Color.Yellow;
+                txt_phoneii.BackColor = Color.Yellow;
+                txt_phoneiii.BackColor = Color.Yellow;
+                txt_email.BackColor = Color.Yellow;
+                txt_website.BackColor = Color.Yellow;
+                txt_address.BackColor = Color.Yellow;
+                txt_description.BackColor = Color.Yellow;
+            
+            
+            
+        }
     }
     
 }
