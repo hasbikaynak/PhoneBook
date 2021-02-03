@@ -57,6 +57,35 @@ namespace MyPhoneDirectoryProject.BLL
             return result;
         }
 
+        public int UpdateRegistry(Guid ID, string Name, string Surname, string PhoneI, string PhoneII, string PhoneIII, string Address,
+            string Email, string Website, string Description)
+        {
+            int result = 0;
+            if (ID != Guid.Empty && !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(Surname) && !string.IsNullOrEmpty(PhoneI))
+            {
+                DirectorySave Registry = new DirectorySave();
+                Registry.ID = ID;
+                Registry.Name = Name;
+                Registry.Surname = Surname;
+                Registry.PhoneI = PhoneI;
+                Registry.PhoneII = PhoneII;
+                Registry.PhoneIII = PhoneIII;
+                Registry.Address = Address;
+                Registry.Email = Email;
+                Registry.Website = Website;
+                Registry.Description = Description;
+               result= DLL.NewRegistry(Registry); 
+
+
+            }
+            else
+            {
+                result = -100; // It will provide me missing parameter error
+            }
+            return result;
+
+        }
+
         public List<DirectorySave> BringDirectorySaves()
         {
             return DLL.BringSaves();

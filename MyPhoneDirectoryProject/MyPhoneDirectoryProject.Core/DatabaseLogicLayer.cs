@@ -53,7 +53,39 @@ namespace MyPhoneDirectoryProject.Core
             } 
             return Result;
         }
+        public int NewRegistry(DirectorySave K)
+        {
+            int result = 0;
+            try
+            {
+                BringSaves();
+                int index = saves.FindIndex(I => I.ID == K.ID);
+                if (index > -1)
+                {
+                    saves[index].Name = K.Name;
+                    saves[index].Surname = K.Surname;
+                    saves[index].Email = K.Email;
+                    saves[index].PhoneI = K.PhoneI;
+                    saves[index].PhoneII = K.PhoneII;
+                    saves[index].PhoneIII = K.PhoneIII;
+                    saves[index].Address = K.Address;
+                    saves[index].Website = K.Website;
+                    saves[index].Description = K.Description;
+                }
+                JsonDBUpdate();
+                result = 1;
+                // go to main form and do update button and create new delete button
+            }
+            catch (Exception ex)
+            {
 
+                
+            }
+            return result;
+           
+            
+            
+        }
         public List<DirectorySave> BringSaves()
         {
             if (File.Exists(@"c:\MyPhoneDirectoryProjectDB\Directory.json"))
