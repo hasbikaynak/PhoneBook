@@ -44,6 +44,7 @@ namespace MyPhoneDirectoryProject.Core
                 //bellekte hicbir degeri yoktu o sekilde yeni deger eklenmek uzere bekliyor.
                 saves.Add(K); // koleksiyonumuza degerimizi ekledik.
                 JsonDBUpdate(); // var ise uzerine yazdi yok ise yeni json olusturdu.
+                Result=1;
             }
             catch (Exception ex)
             {
