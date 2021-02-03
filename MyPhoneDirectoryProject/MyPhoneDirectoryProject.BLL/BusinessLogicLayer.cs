@@ -56,5 +56,10 @@ namespace MyPhoneDirectoryProject.BLL
             }
             return result;
         }
+
+        public List<DirectorySave> BringDirectorySaves()
+        {
+            return DLL.BringSaves();
+        }
     }
 }

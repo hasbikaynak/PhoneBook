@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MyPhoneDirectoryProject.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +13,8 @@ using System.Windows.Forms;
 namespace MyPhoneDirectoryProject.WFUI
 {
     public partial class MainForm : Form
-    {MyPhoneDirectoryProject.BLL.BusinessLogicLayer BLL ;
+    {
+        MyPhoneDirectoryProject.BLL.BusinessLogicLayer BLL;
         public MainForm()
         {
             InitializeComponent();
@@ -25,6 +28,7 @@ namespace MyPhoneDirectoryProject.WFUI
             if (result > 0)
             {
                 MessageBox.Show("Your data has been saved successfully");
+                Fill();
             }
             else if (result == -100)
             {
@@ -34,6 +38,23 @@ namespace MyPhoneDirectoryProject.WFUI
             {
                 MessageBox.Show("Occurred problem, Please try again");
             }
+
+        }
+        private void Fill()
+        {
+            List<DirectorySave> MySaves = BLL.BringDirectorySaves();
+            if (MySaves != null && MySaves.Count > 0)
+            {
+                lst_list.DataSource = MySaves;
+            }
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Fill();
         }
     }
+    
 }
+
