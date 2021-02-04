@@ -349,10 +349,10 @@ namespace MyPhoneDirectoryProject.WFUI
             // lbl_status
             // 
             this.lbl_status.AutoSize = true;
-            this.lbl_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl_status.Location = new System.Drawing.Point(599, 63);
+            this.lbl_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_status.Location = new System.Drawing.Point(533, 70);
             this.lbl_status.Name = "lbl_status";
-            this.lbl_status.Size = new System.Drawing.Size(212, 25);
+            this.lbl_status.Size = new System.Drawing.Size(156, 18);
             this.lbl_status.TabIndex = 1;
             this.lbl_status.Text = "STATUS : WAITING";
             // 
@@ -391,6 +391,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_givexml.TabIndex = 0;
             this.btn_givexml.Text = "GIVE XML ";
             this.btn_givexml.UseVisualStyleBackColor = true;
+            this.btn_givexml.Click += new System.EventHandler(this.btn_givexml_Click);
             // 
             // btn_delete
             // 

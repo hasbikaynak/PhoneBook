@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace MyPhoneDirectoryProject.BLL
 {
@@ -59,6 +60,25 @@ namespace MyPhoneDirectoryProject.BLL
         public int DeleteRegistry(Guid ID)
         {
             return DLL.DeleteRegistry(ID); 
+        }
+
+        public int GiveXML()
+        { int result = 0;
+            try
+            {
+                List<DirectorySave> saves = DLL.BringSaves();
+                XDocument doc = new XDocument(new XDeclaration("1.0.0.1", "UTF-8", "Yes"), new XElement("DirectorySave", saves.Select(I => new XElement("Registry", new XElement("ID", I.ID), new XElement
+                        ("Name", I.Name), new XElement("Surname", I.Surname), new XElement("PhoneI", I.PhoneI), new XElement("PhoneII", I.PhoneII), new XElement("PhoneIII", I.PhoneIII), new XElement
+                        ("Email", I.Email), new XElement("Address", I.Address), new XElement("Website", I.Website), new XElement("Description", I.Description)))));
+                doc.Save(@"c:\MyPhoneDirectoryProjectDB\GiveXML.xml");
+                result = 1;
+            }
+            catch (Exception ex)
+            {
+
+                result = 0;
+            }
+            return result;
         }
         public int UpdateRegistry(Guid ID, string Name, string Surname, string PhoneI, string PhoneII, string PhoneIII, string Address,
             string Email, string Website, string Description)

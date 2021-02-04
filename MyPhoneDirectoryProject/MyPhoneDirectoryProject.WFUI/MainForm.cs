@@ -122,6 +122,21 @@ namespace MyPhoneDirectoryProject.WFUI
                 MessageBox.Show("The problem has ben occurred");
             } 
         }
+
+        private void btn_givexml_Click(object sender, EventArgs e)
+        {
+            int result = BLL.GiveXML();
+            if (result >0)
+            {
+                lbl_status.Text = "Status : XML has been given successfully ";
+            }
+            else
+            {
+                lbl_status.Text = "Status : XML has NOT been given successfully ";
+            }
+
+            
+        }
     }
     
 }
