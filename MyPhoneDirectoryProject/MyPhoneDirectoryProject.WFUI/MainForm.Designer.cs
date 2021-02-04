@@ -60,6 +60,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_givejson = new System.Windows.Forms.Button();
             this.btn_takexml = new System.Windows.Forms.Button();
             this.btn_givexml = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpbox_newdirectoryregistry.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -93,6 +94,7 @@ namespace MyPhoneDirectoryProject.WFUI
             // grpbox_newdirectoryregistry
             // 
             this.grpbox_newdirectoryregistry.Controls.Add(this.btn_update);
+            this.grpbox_newdirectoryregistry.Controls.Add(this.btn_delete);
             this.grpbox_newdirectoryregistry.Controls.Add(this.btn_registry);
             this.grpbox_newdirectoryregistry.Controls.Add(this.tabControl1);
             this.grpbox_newdirectoryregistry.Location = new System.Drawing.Point(363, 15);
@@ -113,14 +115,14 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_update.TabIndex = 1;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_registry_Click);
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_registry
             // 
             this.btn_registry.Location = new System.Drawing.Point(19, 608);
             this.btn_registry.Margin = new System.Windows.Forms.Padding(4);
             this.btn_registry.Name = "btn_registry";
-            this.btn_registry.Size = new System.Drawing.Size(521, 28);
+            this.btn_registry.Size = new System.Drawing.Size(252, 28);
             this.btn_registry.TabIndex = 1;
             this.btn_registry.Text = "New Registry";
             this.btn_registry.UseVisualStyleBackColor = true;
@@ -390,6 +392,17 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_givexml.Text = "GIVE XML ";
             this.btn_givexml.UseVisualStyleBackColor = true;
             // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(279, 608);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(252, 28);
+            this.btn_delete.TabIndex = 1;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_registry_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,5 +463,6 @@ namespace MyPhoneDirectoryProject.WFUI
         private System.Windows.Forms.Button btn_givejson;
         private System.Windows.Forms.Button btn_takexml;
         private System.Windows.Forms.Button btn_givexml;
+        private System.Windows.Forms.Button btn_delete;
     }
 }

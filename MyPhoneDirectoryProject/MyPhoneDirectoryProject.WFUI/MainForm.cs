@@ -83,6 +83,29 @@ namespace MyPhoneDirectoryProject.WFUI
             
             
         }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            if (lst_list.SelectedItem != null)
+            {
+                DirectorySave K = (DirectorySave)lst_list.SelectedItem;
+                int result = BLL.UpdateRegistry(K.ID, txt_name.Text, txt_surname.Text, txt_phonei.Text, txt_phoneii.Text, txt_phoneiii.Text, txt_address.Text, txt_email.Text, txt_website.Text, txt_description.Text);
+                if (result > 0)
+                {
+                    MessageBox.Show("Your values uptaded successfully");
+                    Fill();
+                }
+                else if (result == -100)
+                {
+                    MessageBox.Show("Missing Parameter Eror");
+                }
+                else
+                {
+                    MessageBox.Show("The problem has ben occurred");
+                }
+
+            }
+        }
     }
     
 }
