@@ -21,7 +21,7 @@ namespace MyPhoneDirectoryProject.WFUI
             BLL = new BLL.BusinessLogicLayer();
         }
 
-        private void btn_registry_Click(object sender, EventArgs e)
+            private void btn_registry_Click(object sender, EventArgs e)
         {
             int result = BLL.NewUser(Guid.NewGuid(), txt_name.Text, txt_surname.Text, txt_phonei.Text, txt_phoneii.Text, txt_phoneiii.Text, txt_address.Text, txt_email.Text, txt_website.Text,
                 txt_description.Text);
@@ -105,6 +105,22 @@ namespace MyPhoneDirectoryProject.WFUI
                 }
 
             }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+           Guid DeleteValue = ((DirectorySave)lst_list.SelectedItem).ID;
+            int result = BLL.DeleteRegistry(DeleteValue);
+            if (result > 0)
+            {
+                MessageBox.Show("Your item has been deleted successfully");
+                Fill();
+            }
+           
+            else
+            {
+                MessageBox.Show("The problem has ben occurred");
+            } 
         }
     }
     

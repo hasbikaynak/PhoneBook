@@ -79,13 +79,37 @@ namespace MyPhoneDirectoryProject.Core
             catch (Exception ex)
             {
 
-                
+
             }
             return result;
-           
-            
-            
         }
+            public int DeleteRegistry(Guid ID)
+            {
+                int result = 0;
+                try
+                {
+                BringSaves();
+                DirectorySave deletevalue = saves.Find(I => I.ID == ID);
+                if (deletevalue != null)
+                {
+                    saves.Remove(deletevalue);
+
+                }
+                JsonDBUpdate();
+                result = 1;
+                    
+    
+
+            }
+                catch (Exception ex)
+                {
+
+
+                }
+                return result;
+            }
+
+        
         public List<DirectorySave> BringSaves()
         {
             if (File.Exists(@"c:\MyPhoneDirectoryProjectDB\Directory.json"))
@@ -110,8 +134,9 @@ namespace MyPhoneDirectoryProject.Core
             return userresult;
             
         }
-        #region Helper Methods 
-        private void JsonDBUpdate()
+      
+            #region Helper Methods 
+            private void JsonDBUpdate()
         {
             if (saves != null && saves.Count > 0)
             {

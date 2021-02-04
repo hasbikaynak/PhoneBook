@@ -56,7 +56,10 @@ namespace MyPhoneDirectoryProject.BLL
             }
             return result;
         }
-
+        public int DeleteRegistry(Guid ID)
+        {
+            return DLL.DeleteRegistry(ID); 
+        }
         public int UpdateRegistry(Guid ID, string Name, string Surname, string PhoneI, string PhoneII, string PhoneIII, string Address,
             string Email, string Website, string Description)
         {
@@ -85,6 +88,7 @@ namespace MyPhoneDirectoryProject.BLL
             return result;
 
         }
+
 
         public List<DirectorySave> BringDirectorySaves()
         {
