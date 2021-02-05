@@ -150,6 +150,19 @@ namespace MyPhoneDirectoryProject.WFUI
                 lbl_status.Text = "Status : XML has NOT been given successfully ";
             }
         }
+
+        private void btn_givejson_Click(object sender, EventArgs e)
+        {
+          int result=  BLL.GiveJSON();
+            if (result > 0)
+            {
+                lbl_status.Text = "Status : JSON has been given successfully ";
+            }
+            else
+            {
+                lbl_status.Text = "Status : JSON has NOT been given successfully ";
+            }
+        }
     }
     
 }

@@ -374,6 +374,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_givejson.TabIndex = 0;
             this.btn_givejson.Text = "GIVE JSON";
             this.btn_givejson.UseVisualStyleBackColor = true;
+            this.btn_givejson.Click += new System.EventHandler(this.btn_givejson_Click);
             // 
             // btn_takexml
             // 

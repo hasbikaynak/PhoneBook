@@ -105,6 +105,25 @@ namespace MyPhoneDirectoryProject.BLL
                 
             }
             return result;
+
+        }
+        public int GiveJSON()
+        {
+            int result = 0;
+            try
+            {
+               List<DirectorySave> saves = DLL.BringSaves();
+              string jsontext =  Newtonsoft.Json.JsonConvert.SerializeObject(saves);
+                File.WriteAllText(@"c:\MyPhoneDirectoryProjectDB\GiveJSON.json",jsontext);
+                result = 1;
+            }
+            catch (Exception ex)
+            {
+                result = 0;
+                
+            }
+
+            return result;
         }
         public int UpdateRegistry(Guid ID, string Name, string Surname, string PhoneI, string PhoneII, string PhoneIII, string Address,
             string Email, string Website, string Description)
