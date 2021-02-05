@@ -80,7 +80,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_enter.Name = "btn_enter";
             this.btn_enter.Size = new System.Drawing.Size(418, 32);
             this.btn_enter.TabIndex = 2;
-            this.btn_enter.Text = "Update";
+            this.btn_enter.Text = "Enter";
             this.btn_enter.UseVisualStyleBackColor = true;
             // 
             // groupBox1

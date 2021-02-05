@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,31 @@ namespace MyPhoneDirectoryProject.WFUI
         [STAThread]
         static void Main()
         {
+            bool LK = LicenseControl();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            if (LK)
+            {
+                Application.Run(new Form1());
+            }
+            else
+            {
+                Application.Run(new LicenseScreen());
+            }
+            
+        }
+        static bool LicenseControl()
+        { RegistryKey RK = Registry.CurrentUser.OpenSubKey("MyPhoneDirectoryProjectDB");
+            if (RK != null)
+            {
+                string HDDSN = RK.GetValue("HardDiscNumber").ToString();
+                string MACADD = RK.GetValue("MACaddress").ToString();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
