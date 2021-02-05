@@ -1,6 +1,7 @@
 ﻿using MyPhoneDirectoryProject.Entities;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,6 +78,31 @@ namespace MyPhoneDirectoryProject.BLL
             {
 
                 result = 0;
+            }
+            return result;
+
+        }
+        public int GiveCSV()
+        { int result = 0;
+            try
+            {
+                List<DirectorySave> saves = DLL.BringSaves();
+                StreamWriter SW = new StreamWriter(@"c:\MyPhoneDirectoryProjectDB\GiveCSV.csv");
+                CsvHelper.CsvWriter write = new CsvHelper.CsvWriter(SW);    
+                write.WriteHeader(typeof(DirectorySave));
+                foreach (var item in saves)
+                {
+                    write.WriteRecord(item);
+
+                }
+                SW.Close();
+                result = 1;
+            }
+            catch (Exception ex)
+            {
+
+                result = 0;
+                
             }
             return result;
         }

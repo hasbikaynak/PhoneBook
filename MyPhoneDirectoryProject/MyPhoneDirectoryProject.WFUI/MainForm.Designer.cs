@@ -364,6 +364,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_givecsv.TabIndex = 0;
             this.btn_givecsv.Text = "GIVE CSV";
             this.btn_givecsv.UseVisualStyleBackColor = true;
+            this.btn_givecsv.Click += new System.EventHandler(this.btn_givecsv_Click);
             // 
             // btn_givejson
             // 

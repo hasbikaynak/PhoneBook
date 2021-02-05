@@ -137,6 +137,19 @@ namespace MyPhoneDirectoryProject.WFUI
 
             
         }
+
+        private void btn_givecsv_Click(object sender, EventArgs e)
+        {
+            int result = BLL.GiveCSV();
+            if (result > 0)
+            {
+                lbl_status.Text = "Status : XML has been given successfully ";
+            }
+            else
+            {
+                lbl_status.Text = "Status : XML has NOT been given successfully ";
+            }
+        }
     }
     
 }

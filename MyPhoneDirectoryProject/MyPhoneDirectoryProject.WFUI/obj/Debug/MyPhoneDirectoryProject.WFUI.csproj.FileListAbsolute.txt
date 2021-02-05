@@ -18,3 +18,6 @@ C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.WF
 C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.WFUI\obj\Debug\MyPhoneDirectoryProject.WFUI.exe
 C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.WFUI\obj\Debug\MyPhoneDirectoryProject.WFUI.pdb
 C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.WFUI\obj\Debug\MyPhoneDirectoryProject.WFUI.MainForm.resources
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.WFUI\bin\Debug\CsvHelper.dll
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.WFUI\bin\Debug\CsvHelper.pdb
+C:\Users\CEM\source\PhoneBook\MyPhoneDirectoryProject\MyPhoneDirectoryProject.WFUI\bin\Debug\CsvHelper.xml
