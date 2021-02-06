@@ -63,6 +63,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.txt_licensenumber.Size = new System.Drawing.Size(414, 22);
             this.txt_licensenumber.TabIndex = 0;
             this.txt_licensenumber.Text = "9245fe4a-d402-451c-b9ed-9c1a04247482";
+         
             // 
             // label1
             // 
@@ -82,6 +83,7 @@ namespace MyPhoneDirectoryProject.WFUI
             this.btn_enter.TabIndex = 2;
             this.btn_enter.Text = "Enter";
             this.btn_enter.UseVisualStyleBackColor = true;
+            this.btn_enter.Click += new System.EventHandler(this.btn_enter_Click);
             // 
             // groupBox1
             // 

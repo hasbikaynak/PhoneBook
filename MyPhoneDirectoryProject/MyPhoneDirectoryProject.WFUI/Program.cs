@@ -29,10 +29,10 @@ namespace MyPhoneDirectoryProject.WFUI
             
         }
         static bool LicenseControl()
-        { RegistryKey RK = Registry.CurrentUser.OpenSubKey("MyPhoneDirectoryProjectDB");
+        { RegistryKey RK = Registry.CurrentUser.OpenSubKey("PhoneBook");
             if (RK != null)
             {
-                string HDDSN = RK.GetValue("HardDiscNumber").ToString();
+                string HDDSN = RK.GetValue("HardDiscSerialNumber").ToString();
                 string MACADD = RK.GetValue("MACaddress").ToString();
                 return true;
             }
