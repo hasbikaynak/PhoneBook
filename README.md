@@ -5,9 +5,7 @@ kaynakhasbi1@gmail.com
 
 # What is Purpose of Project?
 
-Mainly purpose of this project is understanding what is "N-tier Architecture", how these things(DatabaseLogicLayer,BussinessLogicLayer,UI) have connection between them;
- 
-,understanding how can we use JSON file as a database and how we can create files as CSV, XML.
+Mainly purpose of this project is understanding what is "N-tier Architecture", how these things(DatabaseLogicLayer,BussinessLogicLayer,UI) have connection between them, understanding how can we use JSON file as a database and how we can create files as CSV, XML.
 
 # Let Me Introduce My Project
 
